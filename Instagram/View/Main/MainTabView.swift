@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let user: User
     @Binding var selectedIndex: Int
     
     var body: some View {
@@ -45,7 +46,7 @@ struct MainTabView: View {
                         Image(systemName: "video")
                     }.tag(3)
                 
-                ProfileView()
+                ProfileView(user: user)
                     .onTapGesture {
                         selectedIndex = 4
                     }
@@ -72,9 +73,8 @@ struct MainTabView: View {
     
     var logoutButton: some View {
         Button {
-             
+            AuthViewModel.shared.signout()
         } label: {
-            
             Text("logout")
                 .foregroundStyle(Color.black)
           

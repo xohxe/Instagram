@@ -14,6 +14,9 @@ struct RegistrationView: View {
     @State private var username = ""
     @State private var fullname = ""
     
+    @Environment(\.presentationMode) var mode
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         ZStack{
             VStack{
@@ -30,7 +33,7 @@ struct RegistrationView: View {
                     .textFieldStyle(.roundedBorder)
                 
                 Button {
-                  
+                    viewModel.register(withEmail: email, password: password, fullname: fullname, username: username)
                 } label: {
                     Text("가입")
                         .font(.headline)
@@ -39,6 +42,12 @@ struct RegistrationView: View {
                         .background(Color.blue)
                         .cornerRadius(8)
                         .padding()
+                }
+                
+                Button {
+                    mode.wrappedValue.dismiss()
+                } label: {
+                    Text("로그인하러가기")
                 }
             }
             .padding()
