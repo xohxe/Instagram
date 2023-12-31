@@ -30,7 +30,7 @@ struct MainTabView: View {
                         Image(systemName: "magnifyingglass")
                     }.tag(1)
                 
-               UploadView()
+                UploadView(tabIndex: $selectedIndex)
                     .onTapGesture {
                         selectedIndex = 2
                     }
