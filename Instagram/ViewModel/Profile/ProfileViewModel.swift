@@ -12,6 +12,20 @@ class ProfileViewModel: ObservableObject {
     
     init(user: User) {
         self.user = user
+        fetchUserStats()
+    }
+    
+    func follow() {
+        guard let uid = user.id else { return }
+    }
+    
+    func unfollow() {
+        guard let uid = user.id else { return }
+    }
+    
+    func fetchUserStats() {
+        guard let uid = user.id else { return }
+        
     }
     
 }

@@ -18,10 +18,10 @@ struct ProfileView: View {
     }
     
     var body: some View {
-        Text("\(user.fullname)")
-        Text("\(user.email)")
-        
-      Text("프로파일")
+      
+        VStack{
+            ProfileHeaderView(viewModel: viewModel)
+        }
     }
 }
 
