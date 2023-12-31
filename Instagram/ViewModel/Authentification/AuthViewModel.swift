@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 class AuthViewModel: ObservableObject {
     
@@ -40,7 +41,8 @@ class AuthViewModel: ObservableObject {
     func register(withEmail email: String, password: String,
                   fullname: String, username:String) {
         
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, 
+                               password: password) { result, error in
             if let error = error {
                 return
             }
@@ -71,6 +73,8 @@ class AuthViewModel: ObservableObject {
         print("로그아웃 성공")
     }
     
+    
+    
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
         print("디버깅 중: uid \(uid)")
@@ -78,6 +82,7 @@ class AuthViewModel: ObservableObject {
             guard let user = try? snapshot?.data(as: User.self) else { return }
             
             self.currentUser = user
+            print(user)
         }
         
         

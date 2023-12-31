@@ -14,17 +14,14 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if viewModel.userSession != nil {
+            
+            if viewModel.userSession == nil {
                 LoginView()
-            } else {
+            }
+            else {
                 if let user = viewModel.currentUser {
-                   // Text("로그인 완료 \(user.username)")
                     MainTabView(user:user, selectedIndex: $selectedIndex)
-                } else {
-                    Text("hihi")
                 }
-                
-                 
             }
         }        
     }
