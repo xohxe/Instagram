@@ -11,17 +11,19 @@ struct SearchView: View {
     
     @State var searchText = ""
     @State var isSearchMode = false
+    @ObservedObject var viewModel = SearchViewModel()
     
     var body: some View {
         ScrollView {
             SearchBar(text: $searchText, isEditing: $isSearchMode)
                 .padding()
-            
             ZStack {
                 if isSearchMode {
-                    Text("검색한 유저리스트, 키워드 보이도록")
+                   // 검색한 유저리스트 표시
+                    UserListView(viewModel: viewModel,
+                                 searchText: $searchText)
                 } else {
-                    Text("포스트 보여주기")
+                    PostGridView(config: .explore)
                 }
             }
         }
