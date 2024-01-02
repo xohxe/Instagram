@@ -14,8 +14,20 @@ struct ProfileHeaderView: View {
     var body: some View {
         VStack (alignment: .leading) {
             HStack {
-                Circle()
-                    .frame(width: 80, height: 80)
+                
+                AsyncImage(url: URL(string: viewModel.user.profileImageUrl ?? "")){ image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width:80, height: 80)
+                        .clipShape(Circle())
+                    
+                } placeholder: {
+                    Circle()
+                        .frame(width:80, height: 80)
+                        .background(.gray)
+                        .clipShape(Circle())
+                }
                 
                 Spacer()
                 
@@ -25,6 +37,8 @@ struct ProfileHeaderView: View {
                     UserStatView(value: viewModel.user.stats?.following ?? 0, title: "팔로잉")
                 }
             }
+            
+            ProfileActionView(viewModel: viewModel)
             
             HStack{
                 Text(viewModel.user.fullname)
