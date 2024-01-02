@@ -40,6 +40,14 @@ struct FeedCell: View {
                 Text(viewModel.post.ownerUsername)
                     .font(.system(size: 14, weight: .semibold))
                 
+                Spacer()
+                
+                Image(systemName: "ellipsis")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.black)
+                    .frame(width: 22, height: 22)
+                
             }
             .padding(.horizontal,8)
             .padding(.vertical,4)
@@ -58,7 +66,7 @@ struct FeedCell: View {
                     .frame(maxWidth:.infinity,minHeight:200, maxHeight: 400)
             }
             
-            HStack (spacing: 8) {
+            HStack (spacing: 12) {
                 
                 Button {
                     didLike ? viewModel.unlike() : viewModel.like()
@@ -90,13 +98,20 @@ struct FeedCell: View {
                         .frame(width: 22, height: 22)
                 }
             }
-            .padding(.horizontal, 8)
+            .padding(.horizontal, 12)
             .padding(.vertical, 4)
             
-            VStack {
-                Text("\(viewModel.likeString)")
-                    .padding(.bottom, 2)
-                
+            VStack(alignment: .leading) {
+            
+                HStack{
+                    Text("\(viewModel.post.likes)명")
+                        .font(.system(size: 15, weight: .semibold))
+                    +
+                    Text("이 좋아합니다.")
+                        .font(.system(size: 15))
+                }
+                .padding(.bottom, 2)
+
                 HStack {
                     Text("\(viewModel.post.ownerUsername)")
                         .font(.system(size: 15, weight: .semibold))
@@ -104,13 +119,15 @@ struct FeedCell: View {
                     Text(" \(viewModel.post.caption)")
                         .font(.system(size: 15))
                 }
-                .padding(.horizontal, 8)
                 
-                Text(viewModel.timestampString)
-                    .font(.system(size: 14))
-                    .foregroundColor(.gray)
+                HStack {
+                    Text(viewModel.timestampString)
+                        .font(.system(size: 14))
+                        .foregroundColor(.gray)
+                }
                     
             }
+            .padding(.horizontal, 12)
         }
     }
 }
