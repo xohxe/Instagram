@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014CB5782B46B8D20016DF70 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5772B46B8D20016DF70 /* SettingView.swift */; };
 		015DD22C2B439B1E0007DD1C /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DD22B2B439B1E0007DD1C /* EditProfileView.swift */; };
 		015DD22E2B439B9E0007DD1C /* ProfileActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DD22D2B439B9E0007DD1C /* ProfileActionView.swift */; };
 		019C79552B3E662B001F55F1 /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C79542B3E662B001F55F1 /* InstagramApp.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014CB5772B46B8D20016DF70 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		015DD22B2B439B1E0007DD1C /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		015DD22D2B439B9E0007DD1C /* ProfileActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionView.swift; sourceTree = "<group>"; };
 		019C79512B3E662B001F55F1 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 			children = (
 				019C79672B3E693A001F55F1 /* LoginView.swift */,
 				019C796B2B3E69CC001F55F1 /* RegistrationView.swift */,
+				014CB5772B46B8D20016DF70 /* SettingView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				019C79682B3E693A001F55F1 /* LoginView.swift in Sources */,
 				01C7E97B2B413F7D00790DAF /* TextArea.swift in Sources */,
 				01C7E9862B4142D900790DAF /* ImageUploader.swift in Sources */,
+				014CB5782B46B8D20016DF70 /* SettingView.swift in Sources */,
 				01C7E97F2B4140F200790DAF /* LazyView.swift in Sources */,
 				019C797F2B3E6BF4001F55F1 /* UploadView.swift in Sources */,
 				019C79572B3E662B001F55F1 /* ContentView.swift in Sources */,
