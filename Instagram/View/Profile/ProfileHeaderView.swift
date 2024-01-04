@@ -40,8 +40,11 @@ struct ProfileHeaderView: View {
             
             ProfileActionView(viewModel: viewModel)
             
-            HStack{
+            VStack (alignment: .leading){
+                
                 Text(viewModel.user.fullname)
+                Text(viewModel.user.bio ?? "")
+                    .foregroundStyle(.gray)
             }
         }
         .padding()

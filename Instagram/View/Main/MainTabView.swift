@@ -55,7 +55,7 @@ struct MainTabView: View {
                     }.tag(4)
             }
             .navigationTitle(tabTitle)
-            .navigationBarItems(trailing: logoutButton)
+            .navigationBarItems(trailing: tabBarItem)
         }
     }
     
@@ -66,8 +66,28 @@ struct MainTabView: View {
         case 1: return "Search"
         case 2: return "Upload"
         case 3: return "Reels"
-        case 4: return "MyPage"
+        case 4: return "\(user.username)"
         default: return ""
+        }
+    }
+    
+    
+    var tabBarItem: some View {
+        switch selectedIndex {
+        case 0: return AnyView(logoutButton)
+        case 1: return AnyView(logoutButton)
+        case 2: return AnyView(logoutButton)
+        case 3: return AnyView(logoutButton)
+        case 4: return AnyView(settingButton)
+        default: return AnyView(logoutButton)
+        }
+    }
+    
+    var settingButton: some View{
+        NavigationLink {
+            SettingView()
+        } label: {
+            Image(systemName: "line.3.horizontal")
         }
     }
     

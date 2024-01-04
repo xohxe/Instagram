@@ -64,7 +64,6 @@ struct EditProfileView: View {
                  
                     Button{
                         imagePickerPresented.toggle()
-                     
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -84,13 +83,6 @@ struct EditProfileView: View {
             if completed {
                 self.mode.wrappedValue.dismiss()
                 self.user.bio = viewModel.user.bio
-              //  self.user.profileImageUrl = viewModel.user.profileImageUrl
-//                if let image = selectedImage {
-//                    viewModel.uploadImage(image){ _ in
-//                        self.user.profileImageUrl = viewModel.user.profileImageUrl
-//                        profileImage = nil
-//                    }
-//                }
             }
         })
     }
