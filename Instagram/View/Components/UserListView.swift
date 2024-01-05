@@ -22,6 +22,11 @@ struct UserListView: View {
                 ForEach(users) { user in
                     NavigationLink {
                         LazyView(ProfileView(user: user))
+                            .navigationBarTitle(user.username, displayMode: .inline)
+                            .navigationBarBackButtonHidden(true)
+                            .navigationBarItems(leading: BackButton())
+                            .navigationBarItems(trailing: settingButton)
+                             
                     } label: {
                         UserCell(user: user)
                     }
@@ -29,6 +34,14 @@ struct UserListView: View {
                 }
             }
             
+        }
+    }
+   
+    var settingButton: some View{
+        NavigationLink {
+            // SettingView()
+        } label: {
+            Image(systemName: "line.3.horizontal")
         }
     }
 }

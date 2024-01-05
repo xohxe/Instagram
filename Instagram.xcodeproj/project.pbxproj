@@ -18,7 +18,9 @@
 		014CB58E2B46E3710016DF70 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 014CB5842B46E3710016DF70 /* Pretendard-ExtraLight.otf */; };
 		014CB58F2B46E3710016DF70 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 014CB5852B46E3710016DF70 /* Pretendard-SemiBold.otf */; };
 		014CB5982B46E4030016DF70 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5932B46E4030016DF70 /* Font+Extensions.swift */; };
-		014CB5A42B47A7140016DF70 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5A32B47A7140016DF70 /* View+Extensions.swift */; };
+		014CB5AA2B481B1E0016DF70 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5A72B481B1E0016DF70 /* LogoutButton.swift */; };
+		014CB5AB2B481B1E0016DF70 /* SettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5A82B481B1E0016DF70 /* SettingButton.swift */; };
+		014CB5AC2B481B1E0016DF70 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5A92B481B1E0016DF70 /* BackButton.swift */; };
 		015DD22C2B439B1E0007DD1C /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DD22B2B439B1E0007DD1C /* EditProfileView.swift */; };
 		015DD22E2B439B9E0007DD1C /* ProfileActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DD22D2B439B9E0007DD1C /* ProfileActionView.swift */; };
 		019C79552B3E662B001F55F1 /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C79542B3E662B001F55F1 /* InstagramApp.swift */; };
@@ -100,7 +102,9 @@
 		014CB5842B46E3710016DF70 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		014CB5852B46E3710016DF70 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		014CB5932B46E4030016DF70 /* Font+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
-		014CB5A32B47A7140016DF70 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		014CB5A72B481B1E0016DF70 /* LogoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
+		014CB5A82B481B1E0016DF70 /* SettingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingButton.swift; sourceTree = "<group>"; };
+		014CB5A92B481B1E0016DF70 /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		015DD22B2B439B1E0007DD1C /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		015DD22D2B439B9E0007DD1C /* ProfileActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionView.swift; sourceTree = "<group>"; };
 		019C79512B3E662B001F55F1 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,45 +189,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		014CB5792B46E3710016DF70 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				014CB57C2B46E3710016DF70 /* Font */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		014CB57C2B46E3710016DF70 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				014CB57D2B46E3710016DF70 /* Pretendard-Regular.otf */,
-				014CB57E2B46E3710016DF70 /* Pretendard-Black.otf */,
-				014CB57F2B46E3710016DF70 /* Pretendard-Medium.otf */,
-				014CB5802B46E3710016DF70 /* Pretendard-Light.otf */,
-				014CB5812B46E3710016DF70 /* Pretendard-ExtraBold.otf */,
-				014CB5822B46E3710016DF70 /* Pretendard-Bold.otf */,
-				014CB5832B46E3710016DF70 /* Pretendard-Thin.otf */,
-				014CB5842B46E3710016DF70 /* Pretendard-ExtraLight.otf */,
-				014CB5852B46E3710016DF70 /* Pretendard-SemiBold.otf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		014CB5902B46E4030016DF70 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				014CB5912B46E4030016DF70 /* Extensions */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		014CB5912B46E4030016DF70 /* Extensions */ = {
+		014CB5A52B47F01F0016DF70 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				014CB5932B46E4030016DF70 /* Font+Extensions.swift */,
-				014CB5A32B47A7140016DF70 /* View+Extensions.swift */,
+				014CB57F2B46E3710016DF70 /* Pretendard-Medium.otf */,
+				014CB5822B46E3710016DF70 /* Pretendard-Bold.otf */,
+				014CB5802B46E3710016DF70 /* Pretendard-Light.otf */,
+				014CB5852B46E3710016DF70 /* Pretendard-SemiBold.otf */,
+				014CB5812B46E3710016DF70 /* Pretendard-ExtraBold.otf */,
+				014CB5842B46E3710016DF70 /* Pretendard-ExtraLight.otf */,
+				014CB57D2B46E3710016DF70 /* Pretendard-Regular.otf */,
+				014CB57E2B46E3710016DF70 /* Pretendard-Black.otf */,
+				014CB5832B46E3710016DF70 /* Pretendard-Thin.otf */,
 			);
-			path = Extensions;
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		014CB5A62B481B1E0016DF70 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				014CB5A72B481B1E0016DF70 /* LogoutButton.swift */,
+				014CB5A82B481B1E0016DF70 /* SettingButton.swift */,
+				014CB5A92B481B1E0016DF70 /* BackButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		019C79482B3E662B001F55F1 = {
@@ -233,6 +223,7 @@
 				019C79622B3E6783001F55F1 /* README.md */,
 				019C79532B3E662B001F55F1 /* Instagram */,
 				019C79522B3E662B001F55F1 /* Products */,
+				014CB5A52B47F01F0016DF70 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,8 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				019C79D72B3EB7B7001F55F1 /* InstagramRelease.entitlements */,
-				014CB5902B46E4030016DF70 /* Source */,
-				014CB5792B46E3710016DF70 /* Resource */,
 				019C79CE2B3E8BBE001F55F1 /* Utils */,
 				019C79C72B3E8A10001F55F1 /* ViewModel */,
 				019C79C22B3E885F001F55F1 /* Model */,
@@ -432,6 +421,7 @@
 		01C7E98E2B414F3000790DAF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				014CB5A62B481B1E0016DF70 /* Button */,
 				01C7E98F2B414F3E00790DAF /* UserListView.swift */,
 				01C7E9912B414FF800790DAF /* UserCell.swift */,
 				01C7E9992B416F6700790DAF /* PostGridView.swift */,
@@ -560,9 +550,9 @@
 				01C7E97F2B4140F200790DAF /* LazyView.swift in Sources */,
 				019C797F2B3E6BF4001F55F1 /* UploadView.swift in Sources */,
 				019C79572B3E662B001F55F1 /* ContentView.swift in Sources */,
+				014CB5AB2B481B1E0016DF70 /* SettingButton.swift in Sources */,
 				01C7E9962B4153F600790DAF /* ProfileHeaderView.swift in Sources */,
 				019C797C2B3E6BB0001F55F1 /* ProfileView.swift in Sources */,
-				014CB5A42B47A7140016DF70 /* View+Extensions.swift in Sources */,
 				01C7E9922B414FF800790DAF /* UserCell.swift in Sources */,
 				019C79C62B3E897C001F55F1 /* Post.swift in Sources */,
 				01C7E97D2B41405300790DAF /* UserService.swift in Sources */,
@@ -578,12 +568,14 @@
 				01C7E9942B41538800790DAF /* UserStatView.swift in Sources */,
 				01C7E9752B41394B00790DAF /* FeedViewModel.swift in Sources */,
 				019C79CA2B3E8A7A001F55F1 /* ProfileViewModel.swift in Sources */,
+				014CB5AC2B481B1E0016DF70 /* BackButton.swift in Sources */,
 				019C79742B3E6AC2001F55F1 /* SearchView.swift in Sources */,
 				015DD22C2B439B1E0007DD1C /* EditProfileView.swift in Sources */,
 				01C7E9772B413A9B00790DAF /* FeedCell.swift in Sources */,
 				019C796C2B3E69CC001F55F1 /* RegistrationView.swift in Sources */,
 				019C79762B3E6AF5001F55F1 /* SearchBar.swift in Sources */,
 				019C79C42B3E8874001F55F1 /* User.swift in Sources */,
+				014CB5AA2B481B1E0016DF70 /* LogoutButton.swift in Sources */,
 				019C79712B3E6A98001F55F1 /* FeedView.swift in Sources */,
 				019C79792B3E6B8A001F55F1 /* ReelsView.swift in Sources */,
 				01C7E98B2B41476500790DAF /* SearchViewModel.swift in Sources */,

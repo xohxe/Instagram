@@ -11,6 +11,7 @@ struct MainTabView: View {
     let user: User
     @Binding var selectedIndex: Int
     
+ 
     var body: some View {
         NavigationView {
             TabView(selection: $selectedIndex){
@@ -55,6 +56,7 @@ struct MainTabView: View {
                     }.tag(4)
             }
             .navigationTitle(tabTitle)
+         //   .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: tabBarItem)
         }
     }
@@ -63,41 +65,22 @@ struct MainTabView: View {
     var tabTitle: String {
         switch selectedIndex {
         case 0: return "Feed"
-        case 1: return "Search"
-        case 2: return "Upload"
+        case 1: return ""
+        case 2: return ""
         case 3: return "Reels"
         case 4: return "\(user.username)"
         default: return ""
         }
     }
     
-    
     var tabBarItem: some View {
         switch selectedIndex {
-        case 0: return AnyView(logoutButton)
-        case 1: return AnyView(logoutButton)
-        case 2: return AnyView(logoutButton)
-        case 3: return AnyView(logoutButton)
-        case 4: return AnyView(settingButton)
-        default: return AnyView(logoutButton)
-        }
-    }
-    
-    var settingButton: some View{
-        NavigationLink {
-            SettingView()
-        } label: {
-            Image(systemName: "line.3.horizontal")
-        }
-    }
-    
-    var logoutButton: some View {
-        Button {
-            AuthViewModel.shared.signout()
-        } label: {
-            Text("logout")
-                .foregroundStyle(Color.black)
-          
+        case 0: return AnyView(EmptyView())
+        case 1: return AnyView(EmptyView())
+        case 2: return AnyView(EmptyView())
+        case 3: return AnyView(EmptyView())
+        case 4: return AnyView(SettingButton())
+        default: return AnyView(EmptyView())
         }
     }
 }
