@@ -31,21 +31,21 @@ struct ProfileHeaderView: View {
                 
                 Spacer()
                 
-                HStack(spacing: 16) {
+                HStack(spacing: 32) {
                     UserStatView(value: viewModel.user.stats?.posts ?? 0, title: "게시물")
                     UserStatView(value: viewModel.user.stats?.followers ?? 0, title: "팔로워")
                     UserStatView(value: viewModel.user.stats?.following ?? 0, title: "팔로잉")
                 }
             }
-            
-            ProfileActionView(viewModel: viewModel)
-            
+                        
             VStack (alignment: .leading){
                 
                 Text(viewModel.user.fullname)
                 Text(viewModel.user.bio ?? "")
                     .foregroundStyle(.gray)
             }
+            
+            ProfileActionView(viewModel: viewModel)
         }
         .padding()
         

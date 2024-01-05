@@ -33,7 +33,10 @@ struct ProfileActionView: View {
         } else {
             // 다른 계정에서는 팔로우 버튼과 메시지 버튼 표시
             HStack {
-                Button(action: {isFollowed ? viewModel.unfollow() : viewModel.follow() }, label: {
+                Button {
+                    isFollowed ? viewModel.unfollow() : viewModel.follow()
+                    print("팔로우...")
+                } label: {
                     Text(isFollowed ? "팔로잉" : "팔로우")
                         .font(.system(size: 14, weight: .semibold))
                         .frame(width: 175, height: 32)
@@ -43,9 +46,12 @@ struct ProfileActionView: View {
                             RoundedRectangle(cornerRadius: 3)
                                 .stroke(Color.gray, lineWidth: isFollowed ? 1 : 0)
                         )
+                        .cornerRadius(3)
+                }
+                
+                Button{
                     
-                }).cornerRadius(3)
-                Button(action: {}, label: {
+                } label: {
                     Text("메시지")
                         .font(.system(size: 14, weight: .semibold))
                         .frame(width: 175, height: 32)
@@ -54,7 +60,8 @@ struct ProfileActionView: View {
                             RoundedRectangle(cornerRadius: 3)
                                 .stroke(Color.gray, lineWidth: 1)
                         )
-                })
+                }
+                
             }
         }
     }

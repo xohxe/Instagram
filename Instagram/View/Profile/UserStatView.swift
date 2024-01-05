@@ -13,9 +13,15 @@ struct UserStatView: View {
     let title: String
     
     var body: some View {
-        VStack{
+        VStack {
             Text("\(value)")
+                .font(.bold14)
             Text(title)
+                .font(.regular14)
         }
     }
 }
+
+//#Preview {
+//    UserStatView(value: 3, title: "팔로우")
+//}
