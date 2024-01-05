@@ -39,9 +39,8 @@ struct LoginView: View {
                             TextField("전화번호, 사용자 이름 또는 이메일", text: $email)
                                 .textFieldStyle(.roundedBorder)
                            
-                            TextField("비밀번호", text: $password)
+                            SecureField("비밀번호", text: $password)
                                 .textFieldStyle(.roundedBorder)
-                
                             
                             Button {
                                viewModel.login(withEmail: email, password: password)
