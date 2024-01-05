@@ -18,6 +18,7 @@
 		014CB58E2B46E3710016DF70 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 014CB5842B46E3710016DF70 /* Pretendard-ExtraLight.otf */; };
 		014CB58F2B46E3710016DF70 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 014CB5852B46E3710016DF70 /* Pretendard-SemiBold.otf */; };
 		014CB5982B46E4030016DF70 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5932B46E4030016DF70 /* Font+Extensions.swift */; };
+		014CB5A42B47A7140016DF70 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CB5A32B47A7140016DF70 /* View+Extensions.swift */; };
 		015DD22C2B439B1E0007DD1C /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DD22B2B439B1E0007DD1C /* EditProfileView.swift */; };
 		015DD22E2B439B9E0007DD1C /* ProfileActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015DD22D2B439B9E0007DD1C /* ProfileActionView.swift */; };
 		019C79552B3E662B001F55F1 /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C79542B3E662B001F55F1 /* InstagramApp.swift */; };
@@ -99,6 +100,7 @@
 		014CB5842B46E3710016DF70 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		014CB5852B46E3710016DF70 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		014CB5932B46E4030016DF70 /* Font+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		014CB5A32B47A7140016DF70 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		015DD22B2B439B1E0007DD1C /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		015DD22D2B439B9E0007DD1C /* ProfileActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionView.swift; sourceTree = "<group>"; };
 		019C79512B3E662B001F55F1 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				014CB5932B46E4030016DF70 /* Font+Extensions.swift */,
+				014CB5A32B47A7140016DF70 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				019C79D72B3EB7B7001F55F1 /* InstagramRelease.entitlements */,
+				014CB5902B46E4030016DF70 /* Source */,
+				014CB5792B46E3710016DF70 /* Resource */,
 				019C79CE2B3E8BBE001F55F1 /* Utils */,
 				019C79C72B3E8A10001F55F1 /* ViewModel */,
 				019C79C22B3E885F001F55F1 /* Model */,
@@ -557,6 +562,7 @@
 				019C79572B3E662B001F55F1 /* ContentView.swift in Sources */,
 				01C7E9962B4153F600790DAF /* ProfileHeaderView.swift in Sources */,
 				019C797C2B3E6BB0001F55F1 /* ProfileView.swift in Sources */,
+				014CB5A42B47A7140016DF70 /* View+Extensions.swift in Sources */,
 				01C7E9922B414FF800790DAF /* UserCell.swift in Sources */,
 				019C79C62B3E897C001F55F1 /* Post.swift in Sources */,
 				01C7E97D2B41405300790DAF /* UserService.swift in Sources */,
